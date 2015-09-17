@@ -66,7 +66,7 @@ $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	'username' => 'root',
-	'password' => 'root',
+	'password' => '',
 	'database' => 'rest',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
@@ -86,9 +86,9 @@ $db['default'] = array(
 
 $db['hd_db'] = array(
 	'dsn'	=> '',
-	'hostname' => '(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=192.168.1.100)(PORT=1521))(CONNECT_DATA=(SID=kakou)))',
-	'username' => 'kakou',
-	'password' => 'kakou',
+	'hostname' => '(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=127.0.0.1)(PORT=1521))(CONNECT_DATA=(SID=kakou)))',
+	'username' => 'test',
+	'password' => 'test',
 	'database' => 'kakou',
 	'dbdriver' => 'oci8',
 	'dbprefix' => '',
@@ -105,5 +105,94 @@ $db['hd_db'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+
+$db['hcq_db'] = array(
+	'dsn'	=> '',
+	'hostname' => '(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=127.0.0.1)(PORT=1521))(CONNECT_DATA=(SID=kakou)))',
+	'username' => 'test',
+	'password' => 'test',
+	'database' => 'kakou',
+	'dbdriver' => 'oci8',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => TRUE,
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+);
+
+$db['dyw_db'] = array(
+	'dsn'	=> '',
+	'hostname' => '(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=127.0.0.1)(PORT=1521))(CONNECT_DATA=(SID=kakou)))',
+	'username' => 'test',
+	'password' => 'test',
+	'database' => 'kakou',
+	'dbdriver' => 'oci8',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => TRUE,
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+);
+
+$db['hy_db'] = array(
+	'dsn'	=> '',
+	'hostname' => '(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=127.0.0.1)(PORT=1521))(CONNECT_DATA=(SID=kakou)))',
+	'username' => 'test',
+	'password' => 'test',
+	'database' => 'kakou',
+	'dbdriver' => 'oci8',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => TRUE,
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+);
+
+$db['lm_db'] = array(
+	'dsn'	=> '',
+	'hostname' => '(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=127.0.0.1)(PORT=1521))(CONNECT_DATA=(SID=kakou)))',
+	'username' => 'test',
+	'password' => 'test',
+	'database' => 'kakou',
+	'dbdriver' => 'oci8',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => TRUE,
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+);
+
 
  

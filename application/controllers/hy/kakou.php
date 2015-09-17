@@ -21,13 +21,13 @@ class Kakou extends Parsing_Controller
         // Construct our parent class
         parent::__construct();
         
-        $this->load->model('Mhd');
+        $this->load->model('Mhy');
 
         // header('Cache-Control: public, max-age=60, s-maxage=60');
         header('Content-Type: application/json');
         header("HTTP/1.1 200 OK");
 
-        $this->img_ip = array('HDWJ-KKDATA1' => '10.44.249.227:81', 'HDWJ-KKDATA2' => '10.44.249.227:82');
+        $this->img_ip = array('HYKK-STORAGE1' => '10.44.240.123', 'HYKK-STORAGE2' => '10.44.240.121');
         $this->hpys_id = array('其他'=>1,'蓝牌'=>2, '黄牌'=>3, '白牌'=>4, '黑牌'=>5);
         $this->fxbh_id = array('其他'=>1, '进城'=>2, '出城'=>3, '由东往西'=>4, '由南往北'=>5, '由西往东'=>6, '由北往南'=>7);
     }
@@ -43,7 +43,7 @@ class Kakou extends Parsing_Controller
         $data['id'] = $this->uri->segment(4);
         $data['last_id'] = $this->uri->segment(5);
 
-        $query = $this->Mhd->getCltx($data);
+        $query = $this->Mhy->getCltx($data);
         $result = $query->result_array();
 
         $items = [];
@@ -74,7 +74,7 @@ class Kakou extends Parsing_Controller
     {
         $id = $this->uri->segment(4);
         
-        $query = $this->Mhd->getCltxById($id);
+        $query = $this->Mhy->getCltxById($id);
         $row = $query->row_array();
         $item = array();
         $item['id']   = (int)$row['ID'];
@@ -101,7 +101,7 @@ class Kakou extends Parsing_Controller
      */
     function cltxmaxid_get()
     {
-        $query = $this->Mhd->getCltxMaxId();
+        $query = $this->Mhy->getCltxMaxId();
         $result = array('maxid' => (int)$query->row()->MAXID);
 
         echo json_encode($result);

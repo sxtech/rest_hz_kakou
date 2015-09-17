@@ -33,7 +33,7 @@ class Index extends CI_Controller
     function index()
     {
         $url_array = [
-            'v1_url' => site_url('v1')
+            'v1_url' => site_url('hd')
         ];
 
         $json = json_encode($url_array, true);

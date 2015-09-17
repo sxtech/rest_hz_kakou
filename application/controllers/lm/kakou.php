@@ -21,7 +21,7 @@ class Kakou extends Parsing_Controller
         // Construct our parent class
         parent::__construct();
         
-        $this->load->model('Mhd');
+        $this->load->model('Mlm');
 
         // header('Cache-Control: public, max-age=60, s-maxage=60');
         header('Content-Type: application/json');
@@ -43,7 +43,7 @@ class Kakou extends Parsing_Controller
         $data['id'] = $this->uri->segment(4);
         $data['last_id'] = $this->uri->segment(5);
 
-        $query = $this->Mhd->getCltx($data);
+        $query = $this->Mlm->getCltx($data);
         $result = $query->result_array();
 
         $items = [];
@@ -58,7 +58,7 @@ class Kakou extends Parsing_Controller
             $items[$id]['fxbh_id'] = array_key_exists($row['FXBH'], $this->fxbh_id) ? $this->fxbh_id[$row['FXBH']] : 1;
             $items[$id]['cdbh'] = (int)$row['CDBH'];
             $items[$id]['kkbh'] = $row['KKBH'];
-            $items[$id]['imgurl'] = "http://" . @$this->img_ip[$row['TPWZ']] . "/$row[QMTP]/" . str_replace('\\','/',$row['TJTP']);
+            $items[$id]['imgurl'] = "http://" . "10.44.252.243" . "/$row[QMTP]/" . str_replace('\\','/',$row['TJTP']);
         }
         $json = json_encode(array('total_count' => $query->num_rows(), 'items' => $items));
 
@@ -74,7 +74,7 @@ class Kakou extends Parsing_Controller
     {
         $id = $this->uri->segment(4);
         
-        $query = $this->Mhd->getCltxById($id);
+        $query = $this->Mlm->getCltxById($id);
         $row = $query->row_array();
         $item = array();
         $item['id']   = (int)$row['ID'];
@@ -88,7 +88,7 @@ class Kakou extends Parsing_Controller
         $item['cdbh'] = (int)$row['CDBH'];
         $item['kkbh'] = $row['KKBH'];
         #$img_ip = array('HDWJ-KKDATA1' => '192.168.1.1', 'HDWJ-KKDATA2' => '192.168.1.2');
-        $item['imgurl'] = "http://" . @$this->img_ip[$row['TPWZ']] . "/$row[QMTP]/" . str_replace('\\','/',$row['TJTP']);
+        $item['imgurl'] = "http://" . "10.44.252.243" . "/$row[QMTP]/" . str_replace('\\','/',$row['TJTP']);
 
         $json = json_encode($item);
 		echo str_replace("\/", "/", $json);
@@ -101,7 +101,7 @@ class Kakou extends Parsing_Controller
      */
     function cltxmaxid_get()
     {
-        $query = $this->Mhd->getCltxMaxId();
+        $query = $this->Mlm->getCltxMaxId();
         $result = array('maxid' => (int)$query->row()->MAXID);
 
         echo json_encode($result);
