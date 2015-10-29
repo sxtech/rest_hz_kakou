@@ -122,6 +122,7 @@ class Kakou extends Parsing_Controller
             $items[$id]['fxbh_code'] = array_key_exists($row['FXBH'], $this->fxbh_code) ? $this->fxbh_code[$row['FXBH']] : 'QT';
             $items[$id]['cdbh'] = (int)$row['CDBH'];
             $items[$id]['kkbh'] = $row['KKBH'];
+            $items[$id]['clbj'] = $row['CLBJ'];
             $items[$id]['imgurl'] = "http://10.47.187.166/$row[QMTP]/"
                                   . str_replace('\\', '/', $row['TJTP']);
         }
@@ -155,6 +156,7 @@ class Kakou extends Parsing_Controller
         $item['fxbh_code'] = array_key_exists($row['FXBH'], $this->fxbh_code) ? $this->fxbh_code[$row['FXBH']] : 'QT';
         $item['cdbh'] = (int)$row['CDBH'];
         $item['kkbh'] = $row['KKBH'];
+        $item['clbj'] = $row['CLBJ'];
         #$img_ip = array('HDWJ-KKDATA1' => '192.168.1.1', 'HDWJ-KKDATA2' => '192.168.1.2');
         $item['imgurl'] = "http://10.47.187.166/$row[QMTP]/"
                         . str_replace('\\', '/', $row['TJTP']);
