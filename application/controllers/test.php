@@ -131,4 +131,20 @@ class Test extends CI_Controller
         $user = strstr($email, '@', true); // 从 PHP 5.3.0 起
         //echo $user; // 打印 yuxiaoxiao 
     }
+
+    public function thumb()
+    {
+        $config['image_library'] = 'gd2';
+        $config['source_image'] = 'C:/SpreadData/test.jpg';
+        $config['create_thumb'] = TRUE;
+        $config['maintain_ratio'] = TRUE;
+        $config['dynamic_output'] = TRUE;
+        #$config['quality'] = 100;
+        $config['width']     = 600;
+        $config['height']   = 250;
+
+        $this->load->library('image_lib', $config);
+
+        $this->image_lib->resize();
+    }
 }
