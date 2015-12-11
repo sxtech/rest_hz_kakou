@@ -21,7 +21,7 @@ class Kakou extends Parsing_Controller
         // Construct our parent class
         parent::__construct();
         
-        #$this->load->model('Mjjlm');
+        $this->load->model('Mjjlm');
 
         // header('Cache-Control: public, max-age=60, s-maxage=60');
 		header('Access-Control-Allow-Origin:*');
