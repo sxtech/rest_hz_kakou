@@ -194,5 +194,27 @@ $db['lm_db'] = array(
 	'save_queries' => TRUE
 );
 
+$db['jj_lm_db'] = array(
+	'dsn'	=> '',
+	'hostname' => '127.0.0.1',
+	'username' => '123',
+	'password' => '123',
+	'database' => 'Its_Image',
+	'dbdriver' => 'sqlsrv',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => TRUE,
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+);
+
 
  
